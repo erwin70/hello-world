@@ -8,3 +8,13 @@ zsh
 sh
 s
 hjetjteketkreyklryk
+dsgsggzgzg
+gzg
+gzr
+g
+zg
+zg
+zg
+z
+gz
+gz
