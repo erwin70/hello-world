@@ -1,1 +1,226 @@
+git commit -help		
+usage: git commit [] [--] ...		
+		
+    -q, --quiet           	
+suppress summary after successful commit	          
+samenvatting onderdrukken na succesvolle commit
+
+    -v, --verbose         	
+show diff in commit message template	              
+toon diff in commit-berichtsjabloon
+		
+Commit message options		
+    -F, --file             	read message from file	                            bericht uit bestand lezen
+    --author              	override author for commit	                        overschrijf auteur voor commit
+    --date                 	override date for commit	                          overschrijfdatum voor commit
+    -m, --message 		
+commit message		
+    -c, --reedit-message 	reuse and edit message from specified commit	hergebruik en bewerk het bericht van de opgegeven commit
+                          		
+    -C, --reuse-message 	reuse message from specified commit	hergebruik bericht van gespecificeerde commit
+                         		
+    --fixup       	use autosquash formatted message to fixup specified commit	gebruik een autosquash-geformatteerd bericht om de opgegeven commit te herstellen
+    --squash      	use autosquash formatted message to squash specified commit	gebruik een autosquash-geformatteerd bericht om de opgegeven commit te vernietigen
+    --reset-author        	the commit is authored by me now (used with -C/-c/--amend)	de commit is nu door mij geschreven (gebruikt met -C/-c/--amend)
+    -s, --signoff         	add a Signed-off-by trailer	voeg een Afgetekend door-trailer toe
+    -t, --template 	use specified template file	gebruik het gespecificeerde sjabloonbestand
+                          		
+    -e, --edit           	force edit of commit	forceer bewerking van commit
+    --cleanup       	how to strip spaces and #comments from message	hoe je spaties en #opmerkingen uit een bericht verwijdert
+    --status              	include status in commit message template	status opnemen in commit-berichtsjabloon
+    -S, --gpg-sign[=]	GPG sign commit	GPG sign commit
+                          		
+		
+Commit contents options		
+    -a, --all             	commit all changed files	alle gewijzigde bestanden vastleggen
+    -i, --include         	add specified files to index for commit	voeg gespecificeerde bestanden toe aan de index voor commit
+    --interactive         	interactively add files	interactief bestanden toevoegen
+    -p, --patch           	interactively add changes	interactief wijzigingen toevoegen
+    -o, --only            	commit only specified files	alleen gespecificeerde bestanden committen
+    -n, --no-verify      	bypass pre-commit and commit-msg hooks	omzeil pre-commit en commit-msg hooks
+    --dry-run             	show what would be committed	laten zien wat er zou worden gepleegd
+    --short               	show status concisely	status kort en bondig weergeven
+    --branch             	show branch information	toon filiaalinformatie
+    --ahead-behind        	compute full ahead/behind values	bereken de volledige waarden voor/achter
+    --porcelain          	machine-readable output	machineleesbare uitvoer
+    --long                	show status in long format (default)	status in lang formaat weergeven (standaard)
+    -z, --null            	terminate entries with NUL	be毛indig de invoer met NUL
+    --amend               	amend previous commit	eerdere toezegging wijzigen
+    --no-post-rewrite     	bypass post-rewrite hook	omzeil de post-rewrite hook
+    -u, --untracked-files[=]	show untracked files, optional modes: all, normal, no. (Default: all)	toon niet-bijgehouden bestanden, optionele modi: alles, normaal, nee. (Standaard: alles)
+		
+    --pathspec-from-file 	read pathspec from file	read pathspec from file
+                          		
+    --pathspec-file-nul   	with --pathspec-from-file, pathspec elements are separated with NUL character	met --pathspec-from-file worden pathspec-elementen gescheiden door het NUL-teken
+		
+Opmerking: Je kunt ook gebruiken --help in plaats van -helpom de relevante Git-handleidingpagina te openen		
+		
+		
+		
+Git help --all Bekijk alle mogelijke opdrachten		
+		
+Om alle mogelijke commando's weer te geven, gebruik je het help --allcommando:		
+		
+Waarschuwing: hierdoor wordt een zeer lange lijst met opdrachten weergegeven		
+		
+Voorbeeld		
+$ git help --all		
+See 'git help ' 	to read about a specific subcommand	om over een specifiek subcommando te lezen
+		
+Main Porcelain Commands		
+   add                  	Add file contents to the index	Bestandsinhoud toevoegen aan de index
+   am                   	Apply a series of patches from a mailbox	Pas een reeks patches toe vanuit een mailbox
+   archive              	Create an archive of files from a named tree	Maak een archief met bestanden uit een benoemde boom
+   bisect               	Use binary search to find the commit that introduced a bug	Gebruik binair zoeken om de commit te vinden die een bug heeft geïntroduceerd
+   branch               	List, create, or delete branches	Vertakkingen weergeven, maken of verwijderen
+   bundle               	Move objects and refs by archive	Verplaats objecten en referenties per archief
+   checkout             	Switch branches or restore working tree files	Schakel tussen takken of herstel werkende boombestanden
+   cherry-pick          	Apply the changes introduced by some existing commits	Pas de wijzigingen toe die zijn geïntroduceerd door enkele bestaande commits
+   citool               	Graphical alternative to git-commit	Grafisch alternatief voor git-commit
+   clean                	Remove untracked files from the working tree	Verwijder niet-bijgehouden bestanden uit de werkboom
+   clone                	Clone a repository into a new directory	Kloon een repository naar een nieuwe map
+   commit               	Record changes to the repository	Registreer wijzigingen in de repository
+   describe             	Give an object a human readable name based on an available ref	Geef een object een voor mensen leesbare naam op basis van een beschikbare ref
+   diff                 	Show changes between commits, commit and working tree, etc	Toon veranderingen tussen commits, commit en werkboom, etc
+   fetch                	Download objects and refs from another repository	Download objecten en referenties uit een andere repository
+   format-patch         	Prepare patches for e-mail submission	Patches voorbereiden voor verzending via e-mail
+   gc                   	Cleanup unnecessary files and optimize the local repository	Ruim onnodige bestanden op en optimaliseer de lokale repository
+   gitk                 	The Git repository browser	De Git-repositorybrowser
+   grep                 	Print lines matching a pattern	Print lijnen die overeenkomen met een patroon
+   gui                  	A portable graphical interface to Git	Een draagbare grafische interface voor Git
+   init                 	Create an empty Git repository or reinitialize an existing one	Maak een lege Git-repository of initialiseer een bestaande opnieuw
+   log                  	Show commit logs	Toon commitlogboeken
+   maintenance          	Run tasks to optimize Git repository data	Voer taken uit om Git-repositorygegevens te optimaliseren
+   merge                	Join two or more development histories together	Voeg twee of meer ontwikkelingsgeschiedenissen samen
+   mv                   	Move or rename a file, a directory, or a symlink	Verplaats of hernoem een ​​bestand, map of symlink
+   notes                	Add or inspect object notes	Objectnotities toevoegen of inspecteren
+   pull                 	Fetch from and integrate with another repository or a local branch	Ophalen uit en integreren met een andere repository of een lokale branch
+   push                 	Update remote refs along with associated objects	Update externe referenties samen met bijbehorende objecten
+   range-diff           	Compare two commit ranges (e.g. two versions of a branch)	Vergelijk twee commit-bereiken (bijvoorbeeld twee versies van een vertakking)
+   rebase               	Reapply commits on top of another base tip	Breng commits opnieuw aan bovenop een andere basistip
+   reset                	Reset current HEAD to the specified state	Reset de huidige HEAD naar de opgegeven status
+   restore              	Restore working tree files	Herstel werkende boombestanden
+   revert               	Revert some existing commits	Zet een aantal bestaande commits terug
+   rm                   	Remove files from the working tree and from the index	Verwijder bestanden uit de werkboom en uit de index
+   shortlog             	Summarize 'git log' output	Vat de uitvoer van 'git log' samen
+   show                 	Show various types of objects	Laat verschillende soorten objecten zien
+   sparse-checkout      	Initialize and modify the sparse-checkout	Initialiseer en wijzig de sparse-checkout
+   stash                	Stash the changes in a dirty working directory away	Berg de wijzigingen op in een vuile werkmap
+   status               	Show the working tree status	Toon de werkende boomstatus
+   submodule            	Initialize, update or inspect submodules	Initialiseer, update of inspecteer submodules
+   switch               	Switch branches	Wissel van vestiging
+   tag                  	Create, list, delete or verify a tag object signed with GPG	Creëer, vermeld, verwijder of verifieer een tagobject ondertekend met GPG
+   worktree             	Manage multiple working trees	Beheer meerdere werkende bomen
+		
+Ancillary Commands / Manipulators		
+   config               	Get and set repository or global options	Repository- of globale opties ophalen en instellen
+   fast-export          	Git data exporter	Git-gegevensexporteur
+   fast-import          	Backend for fast Git data importers	Backend voor snelle importeurs van Git-gegevens
+   filter-branch        	Rewrite branches	Herschrijf takken
+   mergetool            	Run merge conflict resolution tools to resolve merge conflicts	Voer samenvoegconflictoplossingstools uit om samenvoegconflicten op te lossen
+   pack-refs            	Pack heads and tags for efficient repository access	Verpak heads en tags voor effici毛nte toegang tot de repository
+   prune                	Prune all unreachable objects from the object database	Snoei alle onbereikbare objecten uit de objectdatabase
+   reflog               	Manage reflog information	Beheer reflog-informatie
+   remote               	Manage set of tracked repositories	Beheer een set bijgehouden opslagplaatsen
+   repack               	Pack unpacked objects in a repository	Verpak uitgepakte objecten in een repository
+   replace              	Create, list, delete refs to replace objects	Cre毛er, vermeld en verwijder referenties om objecten te vervangen
+		
+Ancillary Commands / Interrogators		
+   annotate             	Annotate file lines with commit information	Annoteer bestandsregels met commit-informatie
+   blame                	Show what revision and author last modified each line of a file	Laat elke regel van een bestand zien welke revisie en auteur het laatst heeft gewijzigd
+   bugreport            	Collect information for user to file a bug report	Verzamel informatie zodat de gebruiker een bugrapport kan indienen
+   count-objects        	Count unpacked number of objects and their disk consumption	Tel het uitgepakte aantal objecten en hun schijfverbruik
+   difftool             	Show changes using common diff tools	Toon wijzigingen met behulp van veelgebruikte diff-tools
+   fsck                 	Verifies the connectivity and validity of the objects in the database	Controleert de connectiviteit en geldigheid van de objecten in de database
+   gitweb               	Git web interface (web frontend to Git repositories)	Git-webinterface (webfrontend naar Git-repository's)
+   help                 	Display help information about Git	Help-informatie over Git weergeven
+   instaweb             	Instantly browse your working repository in gitweb	Blader direct door uw werkrepository in gitweb
+   merge-tree           	Show three-way merge without touching index	Toon samenvoeging in drie richtingen zonder de index aan te raken
+   rerere               	Reuse recorded resolution of conflicted merges	Hergebruik de vastgelegde oplossing van conflicterende fusies
+   show-branch          	Show branches and their commits	Toon branches en hun commits
+   verify-commit        	Check the GPG signature of commits	Controleer de GPG-handtekening van commits
+   verify-tag           	Check the GPG signature of tags	Controleer de GPG-handtekening van tags
+   whatchanged          	Show logs with difference each commit introduces	Toon logs met verschillen die elke commit introduceert
+		
+Interacting with Others		
+   archimport           	Import a GNU Arch repository into Git	Importeer een GNU Arch-repository in Git
+   cvsexportcommit      	Export a single commit to a CVS checkout	Exporteer een enkele commit naar een CVS-checkout
+   cvsimport            	Salvage your data out of another SCM people love to hate	Red uw gegevens uit een andere SCM die mensen graag haten
+   cvsserver            	A CVS server emulator for Git	Een CVS-serveremulator voor Git
+   imap-send            	Send a collection of patches from stdin to an IMAP folder	Stuur een verzameling patches van stdin naar een IMAP-map
+   p4                   	Import from and submit to Perforce repositories	Importeren uit en verzenden naar Perforce-repository's
+   quiltimport          	Applies a quilt patchset onto the current branch	Past een quiltpatchet toe op de huidige tak
+   request-pull         	Generates a summary of pending changes	Genereert een samenvatting van openstaande wijzigingen
+   send-email           	Send a collection of patches as emails	Stuur een verzameling patches als e-mail
+   svn                  	Bidirectional operation between a Subversion repository and Git	Bidirectionele werking tussen een Subversion-repository en Git
+		
+Low-level Commands / Manipulators		
+   apply                	Apply a patch to files and/or to the index	Pas een patch toe op bestanden en/of op de index
+   checkout-index       	Copy files from the index to the working tree	Kopieer bestanden van de index naar de werkboom
+   commit-graph         	Write and verify Git commit-graph files	Schrijf en verifieer Git commit-graph-bestanden
+   commit-tree          	Create a new commit object	Maak een nieuw commit-object
+   hash-object          	Compute object ID and optionally creates a blob from a file	Bereken de object-ID en maak optioneel een blob op basis van een bestand
+   index-pack           	Build pack index file for an existing packed archive	Bouw een pakketindexbestand voor een bestaand ingepakt archief
+   merge-file           	Run a three-way file merge	Voer een bestandssamenvoeging in drie richtingen uit
+   merge-index          	Run a merge for files needing merging	Voer een samenvoeging uit voor bestanden die moeten worden samengevoegd
+   mktag                	Creates a tag object	Cre毛ert een tagobject
+   mktree               	Build a tree-object from ls-tree formatted text	Bouw een boomobject van in ls-tree opgemaakte tekst
+   multi-pack-index     	Write and verify multi-pack-indexes	Schrijf en verifieer multi-pack-indexen
+   pack-objects         	Create a packed archive of objects	Cre毛er een volgepakt archief met objecten
+   prune-packed         	Remove extra objects that are already in pack files	Verwijder extra objecten die al in pakketbestanden staan
+   read-tree            	Reads tree information into the index	Leest boominformatie in de index
+   symbolic-ref         	Read, modify and delete symbolic refs	Symbolische referenties lezen, wijzigen en verwijderen
+   unpack-objects       	Unpack objects from a packed archive	Pak objecten uit een ingepakt archief uit
+   update-index         	Register file contents in the working tree to the index	Registreer de bestandsinhoud in de werkboom in de index
+   update-ref           	Update the object name stored in a ref safely	Werk de objectnaam opgeslagen in een ref veilig bij
+   write-tree           	Create a tree object from the current index	Maak een boomobject van de huidige index
+		
+Low-level Commands / Interrogators		
+   cat-file             	Provide content or type and size information for repository objects	Geef inhoud of type- en grootte-informatie op voor repositoryobjecten
+   cherry               	Find commits yet to be applied to upstream	Vind commits die nog moeten worden toegepast op upstream
+   diff-files           	Compares files in the working tree and the index	Vergelijkt bestanden in de werkboom en de index
+   diff-index           	Compare a tree to the working tree or index	Vergelijk een boom met de werkende boom of index
+   diff-tree            	Compares the content and mode of blobs found via two tree objects	Vergelijkt de inhoud en modus van blobs gevonden via twee boomobjecten
+   for-each-ref         	Output information on each ref	Voer informatie uit over elke ref
+   for-each-repo        	Run a Git command on a list of repositories	Voer een Git-opdracht uit op een lijst met opslagplaatsen
+   get-tar-commit-id    	Extract commit ID from an archive created using git-archive	Haal de commit-ID uit een archief dat is gemaakt met behulp van git-archive
+   ls-files             	Show information about files in the index and the working tree	Toon informatie over bestanden in de index en de werkboom
+   ls-remote            	List references in a remote repository	Vermeld referenties in een externe repository
+   ls-tree              	List the contents of a tree object	Maak een lijst van de inhoud van een boomobject
+   merge-base           	Find as good common ancestors as possible for a merge	Vind zo goed mogelijke gemeenschappelijke voorouders voor een fusie
+   name-rev             	Find symbolic names for given revs	Vind symbolische namen voor bepaalde toerentallen
+   pack-redundant       	Find redundant pack files	Vind overtollige pakketbestanden
+   rev-list             	Lists commit objects in reverse chronological order	Geeft commit-objecten weer in omgekeerde chronologische volgorde
+   rev-parse            	Pick out and massage parameters	Parameters uitzoeken en masseren
+   show-index           	Show packed archive index	Toon ingepakte archiefindex
+   show-ref             	List references in a local repository	Vermeld referenties in een lokale repository
+   unpack-file          	Creates a temporary file with a blob's contents	Cre毛ert een tijdelijk bestand met de inhoud van een blob
+   var                  	Show a Git logical variable	Toon een logische Git-variabele
+   verify-pack          	Validate packed Git archive files	Valideer ingepakte Git-archiefbestanden
+		
+Low-level Commands / Syncing Repositories		
+   daemon               	A really simple server for Git repositories	Een heel eenvoudige server voor Git-repository's
+   fetch-pack           	Receive missing objects from another repository	Ontvang ontbrekende objecten uit een andere repository
+   http-backend         	Server side implementation of Git over HTTP	Implementatie aan de serverzijde van Git via HTTP
+   send-pack            	Push objects over Git protocol to another repository	Push objecten via het Git-protocol naar een andere repository
+   update-server-info   	Update auxiliary info file to help dumb servers	Update het hulpinformatiebestand om domme servers te helpen
+		
+Low-level Commands / Internal Helpers		
+   check-attr          	Display gitattributes information	Geef gitattributen-informatie weer
+   check-ignore         	Debug gitignore / exclude files	Debug gitignore/uitsluiten van bestanden
+   check-mailmap        	Show canonical names and email addresses of contacts	Toon canonieke namen en e-mailadressen van contacten
+   check-ref-format     	Ensures that a reference name is well formed	Zorgt ervoor dat een referentienaam goed gevormd is
+   column               	Display data in columns	Geef gegevens in kolommen weer
+   credential           	Retrieve and store user credentials	Gebruikersreferenties ophalen en opslaan
+   credential-cache     	Helper to temporarily store passwords in memory	Helper om wachtwoorden tijdelijk in het geheugen op te slaan
+   credential-store     	Helper to store credentials on disk	Helper om inloggegevens op schijf op te slaan
+   fmt-merge-msg        	Produce a merge commit message	Maak een merge commit-bericht
+   interpret-trailers   	Add or parse structured information in commit messages	Voeg gestructureerde informatie toe of parseer deze in commit-berichten
+   mailinfo             	Extracts patch and authorship from a single e-mail message	Haalt patch en auteurschap uit één enkel e-mailbericht
+   mailsplit           	Simple UNIX mbox splitter program	Eenvoudig UNIX mbox-splitterprogramma
+   merge-one-file       	The standard helper program to use with git-merge-index	Het standaard helperprogramma om te gebruiken met git-merge-index
+   patch-id             	Compute unique ID for a patch	Bereken de unieke ID voor een patch
+   sh-i18n              	Git's i18n setup code for shell scripts	Git's i18n-installatiecode voor shell-scripts
+   sh-setup             	Common Git shell script setup code	Algemene installatiecode voor Git-shellscript
+   stripspace           	Remove unnecessary whitespace	Verwijder onnodige witruimte
 
